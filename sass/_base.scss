@@ -35,3 +35,8 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+// To fit content we use auto or min-content in grid
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+}
