@@ -19,7 +19,7 @@ html {
 /* Properties which will be inherited to all element */
 body {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
@@ -34,7 +34,7 @@ body {
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("../img/hero.jpg"); /* As we want linear gradient on image we write gradient first then the image with color opacity of 0.8 */
+    url('../img/hero.jpg'); /* As we want linear gradient on image we write gradient first then the image with color opacity of 0.8 */
   background-size: cover;
   background-position: top;
   clip-path: polygon(
@@ -160,7 +160,7 @@ body {
 }
 
 .btn::after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 100%; /* This means height of button as it is child of button */
   width: 100%;
