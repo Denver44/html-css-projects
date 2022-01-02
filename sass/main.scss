@@ -4,14 +4,16 @@ $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff;
 
+// THis is the Basic reset which we have to do
 *,
 *::after,
 *::before {
   margin: 0;
   border: 0;
-  box-sizing: inherit;
+  box-sizing: inherit; // Always but Box-sizing inherit
 }
 
+// in html declare the font size
 html {
   font-size: 62.5%;
 }
