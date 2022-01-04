@@ -102,6 +102,15 @@ body {
   padding: 25rem 0;
   margin-top: -20vh; }
 
+.section-features {
+  margin-top: -10rem;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   font-size: 1.6rem;
@@ -145,7 +154,7 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-btn-text:link, btn-text:visited {
+.btn-text:link, .btn-text:visited {
   text-decoration: none;
   font-size: 1.6rem;
   display: inline-block;
@@ -154,13 +163,13 @@ btn-text:link, btn-text:visited {
   border-bottom: 1px solid #55c57a;
   padding: 3px; }
 
-btn-text:hover {
+.btn-text:hover {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
 
-btn-text:active {
+.btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
@@ -169,8 +178,9 @@ btn-text:active {
   .composition__photo {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
     position: absolute;
-    transition: all 0.2s;
+    transition: transform 0.3s;
     z-index: 10;
     outline-offset: 2rem; }
     .composition__photo--p1 {
@@ -189,6 +199,24 @@ btn-text:active {
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
 
 .header {
   height: 95vh;
@@ -222,16 +250,16 @@ btn-text:active {
   .row [class^='col-'] {
     float: left; }
     .row [class^='col-']:not(:last-child) {
-      margin-right: 2rem; }
+      margin-right: 6rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 2rem) / 2); }
+    width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 2rem) / 3); }
+    width: calc((100% - 2 * 6rem) / 3); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 2rem) / 4); }
+    width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 2rem) / 3) + 2rem); }
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 2rem) / 4) + 2rem); }
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); }
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
