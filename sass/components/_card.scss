@@ -2,20 +2,19 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
 
   &__side {
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.15);
-    height: 50rem;
-    width: 100%;
+    height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
-    font-size: 4rem;
+    width: 100%;
     backface-visibility: hidden; // IT will hide the back part
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.15);
 
     &--front {
       background-color: $color-white;
@@ -33,13 +32,70 @@
   }
 
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   &:hover &__side--back {
     transform: rotateY(0);
   }
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url('../img/nat-5.jpg');
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-direction-break: clone; // This is very important and without webkit it will not work
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 2rem;
+    padding-right: 6rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
 }
 
-// THE CARD WHEN FLIPS IT FEELS LIKE IT IS COMING TOWARDS US THAT IS PERSPECTIVE AND WE HAVE PERSPECTIVE CSS PROPERTY
-
-// Perspective must be on parent component
+//-webkit-box-direction-break: clone; // The clone will apply all the property to the box created with padding
