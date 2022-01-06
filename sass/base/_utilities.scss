@@ -2,6 +2,9 @@
   &-center-text {
     text-align: center;
   }
+  &-margin-bottom-huge {
+    margin-bottom: 10rem;
+  }
   &-margin-bottom-big {
     margin-bottom: 8rem;
   }
@@ -9,6 +12,18 @@
     margin-bottom: 4rem;
   }
   &-margin-bottom-small {
+    margin-bottom: 1.5rem;
+  }
+  &-margin-top-huge {
+    margin-bottom: 10rem;
+  }
+  &-margin-top-big {
+    margin-bottom: 8rem;
+  }
+  &-margin-top-medium {
+    margin-bottom: 4rem;
+  }
+  &-margin-top-small {
     margin-bottom: 1.5rem;
   }
 }
