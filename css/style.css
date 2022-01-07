@@ -430,7 +430,8 @@ body {
   font-family: inherit;
   border-bottom: 3px solid transparent;
   width: 70%;
-  display: block; }
+  display: block;
+  transition: all 0.3s; }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -444,7 +445,7 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   margin-left: 2rem;
-  margin-top: 0.2rem;
+  margin-top: 0.7rem;
   display: block;
   transition: all 0.3s; }
 

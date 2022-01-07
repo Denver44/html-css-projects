@@ -10,6 +10,7 @@
     border-bottom: 3px solid transparent;
     width: 70%;
     display: block;
+    transition: all 0.3s;
 
     &:focus {
       outline: none;
@@ -29,7 +30,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     margin-left: 2rem;
-    margin-top: 0.7rem
+    margin-top: 0.7rem;
     display: block;
     transition: all 0.3s;
   }
