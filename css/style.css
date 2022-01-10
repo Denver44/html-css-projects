@@ -1,3 +1,10 @@
+/*
+0-600px : Phone
+600px - 900px : Tablet portrait
+900 - 1200px : Tablet landscape
+[1200 - 1800] : is where our normal styles apply
+1800px + : Big Desktop
+*/
 @keyframes moveInLeft {
   0% {
     transform: translateX(-100px);
@@ -34,6 +41,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
