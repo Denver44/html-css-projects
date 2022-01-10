@@ -11,7 +11,9 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
   }
+
   &__background {
     width: 6rem;
     height: 6rem;
@@ -24,8 +26,9 @@
       $color-primary-dark
     );
     z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
-    transform: scale(80);
+    // transform: scale(80);
   }
 
   &__nav {
@@ -35,6 +38,9 @@
     top: 0;
     right: 0;
     z-index: 1500;
+    opacity: 0;
+    width: 0; // So that the hand will remove because opacity doesn't remove it
+    transition: all 0.9s;
   }
 
   &__list {
@@ -44,7 +50,9 @@
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
+    width: 100%;
   }
+
   &__item {
     margin: 1rem;
   }
@@ -74,5 +82,13 @@
       color: $color-primary;
       transform: translateX(1rem);
     }
+  }
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100vw;
   }
 }
