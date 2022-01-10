@@ -43,4 +43,51 @@
   &__group:not(:last-child) {
     margin-bottom: 2rem;
   }
+
+  &__radio-group {
+    width: 30%;
+    display: inline-block;
+  }
+  &__radio-input {
+    visibility: hidden;
+  }
+
+  &__radio-label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-button {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid $color-primary;
+    left: 0;
+    top: -0.5rem;
+
+    &::after {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      height: 1.4rem;
+      width: 1.4rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+    }
+  }
+
+  // As soon as we click on radio button it get checked and then we have to select the radio label and it is not direct child it is sibling so that why we use ~ .
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
 }
+
+// SAME LOGIC WORK FOR CHECK BOXES
