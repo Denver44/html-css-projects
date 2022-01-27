@@ -12,6 +12,11 @@
   --webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative;
 
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    --webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
   &__logo {
     height: 3.5rem;
   }
@@ -29,5 +34,4 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  
 }
