@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden; // IT will hide the back part
     backface-visibility: hidden; // IT will hide the back part
     border-radius: 3px;
     overflow: hidden;
@@ -55,7 +56,7 @@
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
-    --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
