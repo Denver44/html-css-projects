@@ -1,18 +1,25 @@
 {
-  "name": "Natours",
+  "name": "natours",
   "version": "1.0.0",
-  "description": "This is a personal project for learning Advannced CSS topics and saas.",
-  "main": "gulpfile.js",
+  "description": "This is a personal project for learning advanced CSS topics and scss and saas.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "dev:server-firefox": "live-server --browser=firefox",
+    "dev:server": "live-server ",
+    "start": "npm-run-all --parallel dev:server watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.43.4"
+    "autoprefixer": "^10.4.1",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^9.1.0"
   }
 }
