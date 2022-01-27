@@ -167,7 +167,8 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  // This means the media queries work fro the screen where hover property cannot work. and its max width is 56.25 and only this media query is only for screen.
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
