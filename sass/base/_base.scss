@@ -9,14 +9,16 @@
 html {
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
 
+  // THis was not needed as in tba-part we already made the font-size 50%
   // @include respond-phone {
   //   font-size: 50%;
   // }
 
-  // The order is change because of conflicting media queries
+  // The order is change because of conflict in media queries
+
   @include respond(tab-land) {
     // width < 1200
-    font-size: 56.25%; //1 rem = 9px  8/16 = 56.25%
+    font-size: 56.25%; //1 rem = 9px  9/16 = 56.25%
   }
   @include respond(tab-part) {
     // width < 900
